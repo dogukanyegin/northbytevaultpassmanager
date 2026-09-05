@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NorthByte Vault — a local-first password manager by NorthByte Norway Tec .Ltd.">
+  <title>NorthByte Vault — Local Password Manager</title>
+  <link rel="icon" href="assets/northbyte-vault-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top" aria-label="NorthByte Vault home">
+    <img src="assets/northbyte-vault-logo.svg" alt="NorthByte Vault logo">
+    <div>
+      <strong>NorthByte Vault</strong>
+      <span>NorthByte Norway Tec .Ltd.</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#install">Installation</a>
+    <a href="#security">Security</a>
+    <a class="nav-download" href="https://github.com/" target="_blank" rel="noopener">Download</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="eyebrow">LOCAL-FIRST PASSWORD MANAGER</div>
+    <div class="hero-grid">
+      <div>
+        <h1>Your passwords.<br><span>Stored locally.</span></h1>
+        <p class="lead">
+          NorthByte Vault is a lightweight, file-backed password manager designed
+          for local use. No SQLite, no cloud database — your account data and
+          encrypted <code>.nbv</code> vault files stay on your machine.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#download">Download NorthByte Vault</a>
+          <a class="button ghost" href="#install">View installation</a>
+        </div>
+        <div class="meta-row">
+          <span>✓ Windows friendly</span>
+          <span>✓ Bitwarden JSON import</span>
+          <span>✓ Encrypted .nbv vault</span>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="mini-label">NORTHBYTE VAULT</div>
+        <div class="logo-wrap"><img src="assets/northbyte-vault-logo.svg" alt="" aria-hidden="true"></div>
+        <p><strong>Local files. Local control.</strong></p>
+        <p class="muted">Sign out without deleting the account. Your vault files remain on disk.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="section-head">
+      <div class="eyebrow">WHAT YOU GET</div>
+      <h2>Simple architecture.<br>Clear ownership.</h2>
+    </div>
+    <div class="cards">
+      <article><b>01</b><h3>File-backed accounts</h3><p>Local account records are kept in <code>users.json</code>. Your local application does not require SQLite.</p></article>
+      <article><b>02</b><h3>Encrypted vault files</h3><p>Each account can have an encrypted <code>.nbv</code> vault file for persistent password storage.</p></article>
+      <article><b>03</b><h3>Bitwarden import</h3><p>Bring over a standard Bitwarden JSON export and keep your credentials in the NorthByte Vault workflow.</p></article>
+      <article><b>04</b><h3>Offline-friendly</h3><p>The application is intended for local use on your own machine rather than as a hosted cloud service.</p></article>
+    </div>
+  </section>
+
+  <section id="download" class="download-panel">
+    <div>
+      <div class="eyebrow">DOWNLOAD</div>
+      <h2>Get NorthByte Vault</h2>
+      <p class="muted">Replace the download target below with the direct GitHub Release or repository asset URL you publish.</p>
+    </div>
+    <a class="button primary big" href="https://github.com/" target="_blank" rel="noopener">Download from GitHub</a>
+  </section>
+
+  <section id="install" class="section install">
+    <div class="section-head">
+      <div class="eyebrow">INSTALLATION</div>
+      <h2>Run it on Windows</h2>
+      <p class="muted">Extract the downloaded ZIP first, then open PowerShell or Command Prompt inside the project folder.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step">
+        <div class="step-no">1</div>
+        <div>
+          <h3>Open the project folder</h3>
+          <p>After extracting the ZIP, change into the application directory:</p>
+          <pre><code>cd northbyte-vault-file-edition</code></pre>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-no">2</div>
+        <div>
+          <h3>Start the application</h3>
+          <p>Recommended on Windows:</p>
+          <pre><code>start.bat</code></pre>
+          <p class="muted">Or start it directly with Python:</p>
+          <pre><code>python server.py</code></pre>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-no">3</div>
+        <div>
+          <h3>Open NorthByte Vault</h3>
+          <p>Then open the local address shown by the server, normally:</p>
+          <pre><code>http://127.0.0.1:8080</code></pre>
+        </div>
+      </article>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-top"><span></span><span></span><span></span><b>PowerShell</b></div>
+      <pre><code>cd northbyte-vault-file-edition
+python server.py
+
+# then open:
+http://127.0.0.1:8080</code></pre>
+    </div>
+  </section>
+
+  <section id="security" class="section security">
+    <div class="section-head">
+      <div class="eyebrow">SECURITY MODEL</div>
+      <h2>Built for local control.</h2>
+    </div>
+    <div class="security-grid">
+      <div class="security-box"><span>STORAGE</span><strong>users.json + encrypted .nbv</strong><p>Persistent local files instead of a database server.</p></div>
+      <div class="security-box"><span>SESSION</span><strong>Sign out ≠ delete</strong><p>Logging out ends the active session while your local vault files remain.</p></div>
+      <div class="security-box"><span>EXPORT</span><strong>Bitwarden JSON</strong><p>Import a standard Bitwarden JSON export into the local vault workflow.</p></div>
+    </div>
+    <p class="notice"><strong>Security notice:</strong> NorthByte Vault is a local application and should be independently reviewed before being used for high-value production secrets. Keep backups of your encrypted vault files and protect the machine where the application runs.</p>
+  </section>
+</main>
+
+<footer>
+  <div>© NorthByte Norway Tec .Ltd.</div>
+  <div>NorthByte Vault · Local-first password manager</div>
+</footer>
+</body>
+</html>

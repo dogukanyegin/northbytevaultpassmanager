@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="240" viewBox="0 0 720 240">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9fc"/><stop offset="0.55" stop-color="#73c7ff"/><stop offset="1" stop-color="#176cff"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="720" height="240" rx="36" fill="#070b11"/>
+<g transform="translate(28 28)">
+ <path d="M92 6 164 34v62c0 55-31 88-72 110C51 184 20 151 20 96V34L92 6Z" fill="#0e1722" stroke="url(#g)" stroke-width="8"/>
+ <path d="M59 61V139l33-29 37 29V48l-37 33-33-20Z" fill="url(#g)"/>
+ <path d="M67 132v-19a25 25 0 0 1 50 0v19" fill="none" stroke="#f3f7fb" stroke-width="8" stroke-linecap="round"/>
+ <rect x="60" y="125" width="64" height="49" rx="10" fill="#eaf3fb" filter="url(#glow)"/>
+ <circle cx="92" cy="147" r="7" fill="#0d1824"/>
+ <path d="M92 154v10" stroke="#0d1824" stroke-width="6" stroke-linecap="round"/>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" transform="translate(210 68)">
+ <text x="0" y="44" font-size="48" font-weight="800" letter-spacing="3" fill="#f7f9fc">NORTH<tspan fill="#29a9ff">BYTE</tspan></text>
+ <text x="2" y="78" font-size="16" font-weight="700" letter-spacing="5" fill="#aeb9c7">NORWAY TEC .LTD.</text>
+ <text x="2" y="122" font-size="30" font-weight="700" letter-spacing="10" fill="#29a9ff">VAULT</text>
+ <text x="2" y="153" font-size="11" letter-spacing="3" fill="#788798">YOUR PASSWORDS. A SAFER TOMORROW.</text>
+</g>
+</svg>
